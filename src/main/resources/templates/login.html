@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>ourStore - Login</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.min.css" rel="stylesheet">
+  <style type="text/css">
+    html,
+    body,
+    header,
+    .carousel {
+      height: 60vh;
+    }
+
+    @media (max-width: 740px) {
+
+      html,
+      body,
+      header,
+      .carousel {
+        height: 100vh;
+      }
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+
+      html,
+      body,
+      header,
+      .carousel {
+        height: 100vh;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+    <div class="container">
+
+      <!-- Brand -->
+      <nav class="navbar-brand">
+        <strong class="blue-text">ourStore</strong>
+      </nav>
+      
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link waves-effect" href="/">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="#">
+              <span class="clearfix d-sm-inline-block"> Login </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="/signup">
+              <span class="clearfix d-sm-inline-block"> Register </span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="/checkout">
+              <span class="badge red z-depth-1 mr-1"> 1 </span>
+              <i class="fas fa-shopping-cart"></i>
+              <span class="clearfix d-none d-sm-inline-block"> Cart </span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  <br/>
+  <br/>
+  <br/>
+  <!-- Navbar -->
+
+  <!--Main layout-->
+  <main class="login-form">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Welcome Back to ourStore!</div>
+                    <div class="card-body">
+                        <!---<form th:action="@{/login}" method="POST">
+                          <div>
+                              <div class="form-group row">
+                                  <label for="#{label.user.email}" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+                                  <div class="col-md-6">
+                                      <input th:field="*{email}" type="email" id="email" class="form-control" name="email" required autofocus>
+                                  </div>
+                              </div>
+
+                              <div class="form-group row">
+                                  <label for="#{label.user.password}" class="col-md-4 col-form-label text-md-right">Password</label>
+                                  <div class="col-md-6">
+                                      <input th:field="*{password}" type="password" id="password" class="form-control" name="password" required>
+                                  </div>
+                              </div>
+                          </div>-->
+
+                              <div class="col-md-6 offset-md-4">
+                                <form th:action="@{/login}" method="post">
+                                  <div class="form-group row"><label class="col-form-label"> Email : <input type="text" id="email" class="form-control" name="email"/> </label>
+                                  </div>
+                                  <div class="form-group row"><label class="col-form-label"> Password: <input type="password" id="password" class="form-control" name="password"/> </label></div>
+                                  <div><a class="nav-link waves-effect" href="/"><button type="submit" class="btn btn-primary">
+                                    Log In</button></a>
+                                  </div>
+                              </form>
+                              </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2021 Copyright:
+      <a href="https://github.com/agranados0121/SE452-Team5" target="_blank"> The Firewall Four</a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+
+  </script>
+</body>
+
+</html>
